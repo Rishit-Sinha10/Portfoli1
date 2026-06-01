@@ -1,0 +1,10 @@
+:root{
+  --background:#fff;
+  --foreground: #171717;
+  --gradient-shine:#000;
+  --bg-gradient-2: #ffeda6;
+  --bg-gradient-1: #ffd07e;
+}
+html, body, #root {
+  background: var(--background);
+}
