@@ -194,7 +194,7 @@ export function Work({ theme: t = DARK } = {}) {
         alignItems: "center",
       }}
     >
-      <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+      <div style={{ margin: "0 auto" }}>
         <Reveal>
           <div
             style={{
@@ -242,7 +242,6 @@ export function Work({ theme: t = DARK } = {}) {
           className="all-projects-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: 24,
             marginBottom: 48,
           }}
