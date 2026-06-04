@@ -159,7 +159,7 @@ export function Hero({ theme: T, dark } = {}) {
             flexWrap: "wrap",
           }}
         >
-          <HoverButton></HoverButton>
+          <a href="https://drive.google.com/file/d/1p1XKaccALnnAmB1U4ZN23swSsSWkCKrN/view?usp=sharing" download><HoverButton></HoverButton></a>
           <MagButton
             style={{
               padding: "2px 4px",
