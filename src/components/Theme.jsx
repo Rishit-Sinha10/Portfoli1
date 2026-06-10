@@ -15,7 +15,7 @@ export const DARK = {
   surface: "#171614",
   surfaceAlt: "#1E1C1A",
   border: "#2A2825",
-  text: "#F0EDE6",
+  text: "#7A7772",
   muted: "#7A7772",
   accent: "#E07845",
   accentAlt: "#6B8CFF",

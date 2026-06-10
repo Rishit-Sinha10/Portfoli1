@@ -19,6 +19,7 @@ import {
   FaInstagram,
   FaJava,
   FaLinux,
+  FaCss3,
 } from "react-icons/fa";
 
 import {
@@ -50,6 +51,8 @@ import {
   SiApachekafka,
   SiKubernetes,
   SiClerk,
+  SiCss,
+  SiHtml5,
 } from "react-icons/si";
 export function Work({ theme: t = DARK } = {}) {
   const [visibleCount, setVisibleCount] = useState(3);
@@ -123,10 +126,25 @@ export function Work({ theme: t = DARK } = {}) {
       <SiJavascript
         size={10}
         style={{
-          color: "#fff",
+          color: "#fff200",
         }}
       />
     ),
+    CSS: <SiCss size={10} color="#8800ff" />,
+    HTML: (
+      <SiHtml5
+        size={10}
+        style={{
+          color: "#ff6600",
+        }}
+      />
+    ),
+    FLASK:(
+      <SiFlask
+      size={10}
+      style={{
+      color:"#fff"
+      }}/>),
   };
 
   const PROJECTS = [
@@ -179,8 +197,27 @@ export function Work({ theme: t = DARK } = {}) {
       liveUrl: "https://velora-gallery.vercel.app/",
       githubUrl: "https://github.com/Ramesh1234-ai/velora",
     },
+    {
+      title: "VeinChain",
+      desc: "A Blood Donation Management System With Advance filtering,collection management and beutify collection for donor",
+      tech: ["HTML", "JS", "CSS", "MySql", "FLASK"],
+      category: "fullsatck",
+      status: "In Dev",
+      featured: "false",
+      liveUrl: "https://velora-gallery.vercel.app/",
+      githubUrl: "https://github.com/Ramesh1234-ai/VeinChain",
+    },
+    {
+      title: "ZecoAI",
+      desc: "A Text Editor with ai featured using Judge 0 And Monaco Text Editor with Advanced Editing Method",
+      tech: ["React", "NodeJs", "Express", "MongoDB", "Clerk"],
+      category: "fullstack",
+      featured: "false",
+      status: "In Dev",
+      liveUrl: "https://velora-gallery.vercel.app/",
+      githubUrl: "https://github.com/Ramesh1234-ai/HeartSync",
+    },
   ];
-
   return (
     <section
       id="work"
@@ -238,7 +275,7 @@ export function Work({ theme: t = DARK } = {}) {
           className="all-projects-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             gap: 24,
             marginBottom: 24,
           }}
@@ -448,6 +485,26 @@ export function Work({ theme: t = DARK } = {}) {
                     >
                       <span>GitHub</span>
                       <span>→</span>
+                    </motion.a>
+                    <motion.a
+                      href={p.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 2 }}
+                      style={{
+                        fontFamily: "'Space Mono',monospace",
+                        fontSize: 9,
+                        color: t.muted,
+                        letterSpacing: "0.08em",
+                        textDecoration: "none",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 3,
+                        cursor: "pointer",
+                      }}
+                    >
+                      <span>Star</span>
+                      <span></span>
                     </motion.a>
                   </div>
                 </div>

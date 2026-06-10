@@ -146,7 +146,7 @@ export function Skills({ theme: T, dark } = {}) {
               >
                 <span
                   style={{
-                    fontSize: 7,
+                    fontSize: 12,
                     color: theme.muted,
                     fontWeight: 500,
                     letterSpacing: "0.05em",
