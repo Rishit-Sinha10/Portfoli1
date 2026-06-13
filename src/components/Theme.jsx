@@ -5,7 +5,7 @@ export const LIGHT = {
   border: "#E2E0D8",
   text: "#1A1916",
   muted: "#6B6860",
-  accent: "#C8622A",
+  accent: "#37ff00",
   accentAlt: "#3B5BDB",
   glow: "rgba(200,98,42,0.15)",
   glowBlue: "rgba(59,91,219,0.12)",
@@ -17,8 +17,15 @@ export const DARK = {
   border: "#2A2825",
   text: "#7A7772",
   muted: "#7A7772",
-  accent: "#E07845",
+  accent: "#ff8000",
   accentAlt: "#6B8CFF",
   glow: "rgba(224,120,69,0.12)",
   glowBlue: "rgba(107,140,255,0.10)",
 };
+export function Star(){
+  return (
+    <>
+      
+    </>
+  );
+}

@@ -46,6 +46,7 @@ import {
   SiKubernetes,
   SiCss,
   SiClerk,
+  SiBun,
 } from "react-icons/si";
 
 export function Skills({ theme: T, dark } = {}) {
@@ -84,11 +85,12 @@ export function Skills({ theme: T, dark } = {}) {
       ],
     },
     {
-      category: "Cloud",
+      category: "Tools",
       skills: [
         { name: "Render", icon: <SiRender />, color: "#000" },
-        { name: "Vercel", icon: <SiVercel />, color: "#000" },
-        { name: "Clerk", icon: <SiClerk />, color: "rgba(2, 204, 255, 0.4)" },
+        { name: "Vercel", icon: <SiVercel />, color: "" },
+        { name: "Clerk", icon: <SiClerk />, color: "" },
+        { name: "Bun", icon: <SiBun />, color: "#ffdbac" },
       ],
     },
   ];
@@ -122,7 +124,6 @@ export function Skills({ theme: T, dark } = {}) {
             My <em style={{ color: theme.accent }}>Tech Stack</em>
           </h2>
         </Reveal>
-
         {/* Skills Categories */}
         <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
           {skillCategories.map((category, idx) => (

@@ -11,11 +11,17 @@ import { useScramble } from "../hooks/useScramble";
 import { HERO_WORDS } from "../constants/heroConstants";
 import { MagButton } from "./mag";
 import { DARK, LIGHT } from "./Theme";
-import { FaFacebook, FaInstagram, FaLinkedin, FaGithub, FaDiscord } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+  FaDiscord,
+} from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import profilepic from "../assets/profile.png"
+import profilepic from "../assets/profile.png";
 import { HoverButton } from "./HoverButton";
-import proof from "../assets/proof.avif"
+import proof from "../assets/proof.avif";
 export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);
@@ -23,15 +29,16 @@ export function Hero({ theme: T, dark } = {}) {
   const theme = T || DARK;
   const isDark = dark !== undefined ? dark : true;
   // Hooks
-  const scrambled = useScramble("Bulding System That Work", hovered);
+  const scrambled = useScramble("Building Systems That Work", hovered);
   const { scrollY } = useScroll();
   const typewriterText = useTypewriter(
-    "20-year-old developer focused on JavaScript,backend systems,and Frontend Architechture.I care about code that's clean and Useable to Solve real World Problem",
+    "I Bulid Scalable Web System That Solve real world problems Javascript Devloper specializing in backend systems and frontend architecture Focused on performance, clean design, and production-ready code,",
     30,
     800,
   );
   const scrollProgress = useTransform(scrollY, [0, 1000], [0, 100]);
   const blobY = useTransform(scrollY, [0, 600], [0, 80]);
+
   // Word rotation animation
   useEffect(() => {
     const t = setInterval(
@@ -79,6 +86,7 @@ export function Hero({ theme: T, dark } = {}) {
         >
           <img
             src={proof}
+            loading="lazy"
             style={{
               width: "40px",
               height: "40px",
@@ -86,15 +94,13 @@ export function Hero({ theme: T, dark } = {}) {
               objectFit: "cover",
             }}
           />
-          <h6
+          <span
             style={{
               margin: "0",
               fontSize: "16px",
               fontWeight: 400,
             }}
-          >
-            Rishit Sinha
-          </h6>
+          >Rishit Sinha</span>
         </div>
         {/* Name */}
         <motion.h1
@@ -109,7 +115,8 @@ export function Hero({ theme: T, dark } = {}) {
             fontSize: "clamp(32px, 10vw, 60px)",
             fontWeight: 400,
             lineHeight: 0.96,
-            letterSpacing: "-0.03em",
+
+            wordSpacing: "0.6px",
             color: theme.text,
             margin: "0 0 16px",
             cursor: "pointer",
@@ -121,7 +128,7 @@ export function Hero({ theme: T, dark } = {}) {
               style={
                 wi === 1
                   ? {
-                      fontStyle: "italic",
+                      fontFamily: "DM Serif Display', Georgia, serif",
                       color: theme.accent,
                       WebkitTextStroke: "0px",
                     }
@@ -159,10 +166,21 @@ export function Hero({ theme: T, dark } = {}) {
             flexWrap: "wrap",
           }}
         >
-          <a href="https://drive.google.com/file/d/1p1XKaccALnnAmB1U4ZN23swSsSWkCKrN/view?usp=sharing" download><HoverButton></HoverButton></a>
+          <a
+            href="https://drive.google.com/file/d/1p1XKaccALnnAmB1U4ZN23swSsSWkCKrN/view?usp=sharing"
+            download
+          >
+            <HoverButton></HoverButton>
+          </a>
           <MagButton
+            onClick={() => {
+              const element = document.getElementById("work");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
             style={{
-              padding: "2px 4px",
+              padding: "0.6rem 1.8rem",
               background: theme.text,
               color: theme.bg,
               border: "none",
@@ -172,10 +190,10 @@ export function Hero({ theme: T, dark } = {}) {
               letterSpacing: "0.1em",
               textTransform: "uppercase",
               boxShadow: "0 4px 20px rgba(0,0,0,0.18)",
-              borderRadius: "999px",
+              borderRadius: "99rem",
             }}
           >
-            Project
+            <span>View Project →</span>
           </MagButton>
           <a
             href="https://www.instagram.com/rishit_149"

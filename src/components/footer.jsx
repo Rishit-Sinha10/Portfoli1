@@ -51,6 +51,7 @@ export default function NavDock({ darkMode = false, toggleTheme = () => {} }) {
         {/* Logo/Brand */}
         <img
           src={proof}
+          loading="lazy"
           style={{
             marginRight: "8px",
             display: "flex",

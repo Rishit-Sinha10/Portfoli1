@@ -149,7 +149,12 @@ export function HoverButton({
     <StyledWrapper>
       <button className="btn-17">
         <span className="text-container">
-          <span className="text">Resume</span>
+          <span
+            className="text"
+            style={{ fontFamily: "DM Serif Display', Georgia, serif" }}
+          >
+            Hire Me
+          </span>
         </span>
       </button>
     </StyledWrapper>

@@ -96,7 +96,7 @@ function App() {
                   transition: "color 0.3s ease",
                 }}
               >
-                © {currentYear} Ramesh. All rights reserved.
+                © {currentYear} Rishit Sinha. All rights reserved.
               </p>
               <p
                 style={{

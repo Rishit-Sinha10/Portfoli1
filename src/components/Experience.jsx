@@ -4,18 +4,17 @@ import { DARK, LIGHT } from "./Theme";
 export function Experience({ theme: t = DARK } = {}) {
   const EXPERIENCES = [
     {
-      id: "01",
-      title: "Full Stack Intern",
-      company: "NextLearn Technologies",
-      type: "full-time",
-      period: "April 2026 - May 2026",
+      id: "1",
+      title: "Frontend Developer",
+      company: "OctaNet",
+      period: "May 2025 - July 2025",
       description: [
-        "Bulid A Responsive Web Application To Contrast With Other Devlopers To Reduce Latencey of System By 30%",
-        "Collaborated with engineering and design teams to deliver product features",
+        "Implemented reusable UI components to maintain consistency across multiple pages.",
+        "Developed responsive UI components using React.js and Tailwind CSS to enhance user experience",
       ],
     },
     {
-      id: "02",
+      id: "2",
       title: "Full Stack Intern",
       company: "Prodigy InfoTech",
       type: "open source",
@@ -26,13 +25,14 @@ export function Experience({ theme: t = DARK } = {}) {
       ],
     },
     {
-      id: "03",
-      title: "Frontend Developer",
-      company: "OctaNet",
-      period: "May 2025 - July 2025",
+      id: "3",
+      title: "Full Stack Intern",
+      company: "NextLearn Technologies",
+      type: "full-time",
+      period: "April 2026 - May 2026",
       description: [
-        "Implemented reusable UI components to maintain consistency across multiple pages.",
-        "Developed responsive UI components using React.js and Tailwind CSS to enhance user experience",
+        "Bulid A Responsive Web Application To Contrast With Other Devlopers To Reduce Latencey of System By 30%",
+        "Collaborated with engineering and design teams to deliver product features",
       ],
     },
   ];
@@ -59,9 +59,7 @@ export function Experience({ theme: t = DARK } = {}) {
               textAlign: "center",
             }}
           >
-            <em style={{ color: t.accent, fontStyle: "italic" }}>
-              Experience
-            </em>
+            <em style={{ color: t.accent, fontStyle: "italic" }}>Experience</em>
           </h2>
         </Reveal>
 
@@ -91,7 +89,7 @@ export function Experience({ theme: t = DARK } = {}) {
                     opacity: 0.6,
                   }}
                 >
-                  {exp.id}
+                  Level {exp.id}
                 </div>
 
                 {/* Content */}

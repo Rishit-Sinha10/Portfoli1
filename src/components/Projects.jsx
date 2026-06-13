@@ -1,11 +1,14 @@
 import { Reveal } from "./Reveal";
 import { color, motion } from "framer-motion";
-import { DARK, LIGHT } from "./Theme";
+import { DARK, LIGHT, Star } from "./Theme";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import image from "../assets/image.avif";
 import Huzz from "../assets/Huzz.avif";
 import Stream from "../assets/Stream.avif";
+import lumina from "../assets/Lumina.avif";
+import ZecoAI from "../assets/ZecoAI.avif";
+import LifeDrop from "../assets/LifeDrop.avif";
 import {
   FaReact,
   FaNodeJs,
@@ -53,9 +56,11 @@ import {
   SiClerk,
   SiCss,
   SiHtml5,
+  SiMongoose,
+  SiFirebase,
 } from "react-icons/si";
 export function Work({ theme: t = DARK } = {}) {
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [visibleCount, setVisibleCount] = useState(2);
   // Tech logo mapping
   const TECH_LOGOS = {
     React: (
@@ -70,7 +75,7 @@ export function Work({ theme: t = DARK } = {}) {
       <SiExpress
         size={10}
         style={{
-          color: "#000",
+          color: "yellow",
         }}
       />
     ),
@@ -130,7 +135,7 @@ export function Work({ theme: t = DARK } = {}) {
         }}
       />
     ),
-    CSS: <SiCss size={10} color="#8800ff" />,
+    VanillaCSS: <SiCss size={10} color="#8800ff" />,
     HTML: (
       <SiHtml5
         size={10}
@@ -139,19 +144,37 @@ export function Work({ theme: t = DARK } = {}) {
         }}
       />
     ),
-    FLASK:(
+    FLASK: (
       <SiFlask
-      size={10}
-      style={{
-      color:"#fff"
-      }}/>),
+        size={10}
+        style={{
+          color: "#fff",
+        }}
+      />
+    ),
+    Mongoose: (
+      <SiMongoose
+        size={10}
+        style={{
+          color: "#DC143C",
+        }}
+      />
+    ),
+    Firebase: (
+      <SiFirebase
+        size={10}
+        style={{
+          color: "#DC143C",
+        }}
+      />
+    ),
   };
 
   const PROJECTS = [
     {
       title: "FinanCinno",
       subtitle: "Expense Tracker Management System",
-      desc: "Integrated an AI-powered chatbot to provide personalized financial advice Built budget tracking features allowing users to monitor financial goals",
+      desc: "FinanCino is an AI-powered finance tracking system built to make daily expense management simple, consistent, and actionable.Developed using React, Node.js, and Express, it combines a fast, lightweight interface with intelligent insights powered by the Gemini API. The system goes beyond basic tracking by introducing gamified rewards to drive user engagement and long-term financial discipline Designed with a scalable architecture and persistent data storage, FinanCino transforms expense tracking into a structured, insight-driven experience",
       image:
         "https://images.unsplash.com/photo-1554224311-beee415c15a7?w=600&h=400&fit=crop",
       tech: ["React", "Express", "Node.js", "MongoDB", "Clerk"],
@@ -163,19 +186,19 @@ export function Work({ theme: t = DARK } = {}) {
       githubUrl: "https://github.com/Ramesh1234-ai/Financcino",
     },
     {
-      title: "Huzz",
-      desc: "Developed a player analytics platform with secure authentication,Implemented deck analysis algorithms for gameplay optimization,Get real-time deck analysis with detailed metrics and insights.",
-      tech: ["React", "Flask", "MySql", "TailwindCSS"],
-      category: "FullStack",
-      status: "Ready to Ship",
-      image: Huzz,
-      featured: true,
-      liveUrl: "https://deploysus.vercel.app/",
-      githubUrl: "https://github.com/Ramesh1234-ai/clash_royale",
+      title: "Lumina",
+      desc: "An AI-powered learning system that transforms how users study, organize knowledge, and track progress.By integrating smart scheduling, real-time summaries, and personalized learning paths, the platform reduces study friction and enables more efficient, data-driven learning.",
+      tech: ["React", "Node.js", "TailwindCSS", "MongoDB", "Express", "Clerk"],
+      category: "fullsatck",
+      image: lumina,
+      status: "In Dev",
+      featured: "false",
+      liveUrl: "https://lumina-nine-tan.vercel.app/",
+      githubUrl: "https://github.com/Ramesh1234-ai/NoteMog",
     },
     {
       title: "StreamFlow",
-      desc: "Connecting creators and audiences in real-time through seamless, ultra-low-latency streaming  built for anyone, anywhere.",
+      desc: "StreamFlow is a scalable live streaming system designed to deliver ultra-low latency video and real-time audience interaction.The platform replicates a Twitch-like experience with high-performance streaming, real-time chat, and multi-device support. It incorporates AI-powered moderation and intelligent assistance to enhance safety and engagement while maintaining stream quality.Architected with React on the frontend and Node.js/Express on the backend, StreamFlow uses HLS, RTMP, Redis, and CDN-based delivery to handle real-time data flow and ensure consistent performance under load.",
       tech: ["React", "Node.js", "MongoDB", "Express", "Clerk", "TailwindCSS"],
       category: "Fullstack",
       status: "In Dev",
@@ -185,36 +208,14 @@ export function Work({ theme: t = DARK } = {}) {
       githubUrl: "https://github.com/ramesh1234-ai/bookish-spork",
     },
     {
-      title: "Velora Gallery",
-      subtitle: "Image Gallery Platform",
-      desc: "Modern image gallery with advanced filtering, collections management, and beautiful animations for seamless browsing.",
-      image: "../src/com",
-      tech: ["React", "Node.js", "MongoDB", "Express", "TailwindCSS"],
-      category: "Fullstack",
-      status: "Ready to Ship",
-      color: "#8b5cf6",
-      featured: false,
-      liveUrl: "https://velora-gallery.vercel.app/",
-      githubUrl: "https://github.com/Ramesh1234-ai/velora",
-    },
-    {
-      title: "VeinChain",
-      desc: "A Blood Donation Management System With Advance filtering,collection management and beutify collection for donor",
-      tech: ["HTML", "JS", "CSS", "MySql", "FLASK"],
-      category: "fullsatck",
-      status: "In Dev",
-      featured: "false",
-      liveUrl: "https://velora-gallery.vercel.app/",
-      githubUrl: "https://github.com/Ramesh1234-ai/VeinChain",
-    },
-    {
       title: "ZecoAI",
-      desc: "A Text Editor with ai featured using Judge 0 And Monaco Text Editor with Advanced Editing Method",
-      tech: ["React", "NodeJs", "Express", "MongoDB", "Clerk"],
+      desc: "ZecoAI is an AI-powered development environment built to reduce friction in coding, debugging, and iteration.It combines a VS Code-like interface with intelligent code assistance, instant execution, and persistent conversational context, enabling developers to move from idea to working code faster. The system is designed for performance, usability, and seamless developer workflows.Built using React and Node.js, ZecoAI focuses on creating a unified, scalable coding experience.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Clerk", "Mongoose"],
       category: "fullstack",
       featured: "false",
+      image: ZecoAI,
       status: "In Dev",
-      liveUrl: "https://velora-gallery.vercel.app/",
+      liveUrl: "https://zecoai.vercel.app/",
       githubUrl: "https://github.com/Ramesh1234-ai/HeartSync",
     },
   ];
@@ -312,6 +313,7 @@ export function Work({ theme: t = DARK } = {}) {
               >
                 {/* Project Image */}
                 <div
+                  loading="lazy"
                   style={{
                     height: 180,
                     background: `linear-gradient(135deg, ${p.color}25, ${p.color}08)`,
@@ -413,9 +415,9 @@ export function Work({ theme: t = DARK } = {}) {
                           alignItems: "center",
                           gap: 4,
                           padding: "3px 8px",
-                          borderRadius: 6,
+                          borderRadius: 1,
                           background: t.surfaceAlt,
-                          border: `1px solid ${t.border}`,
+                          border: `4px solid ${t.border}`,
                         }}
                         title={tech}
                       >
@@ -425,7 +427,7 @@ export function Work({ theme: t = DARK } = {}) {
                         <span
                           style={{
                             fontFamily: "'Space Mono',monospace",
-                            fontSize: 8,
+                            fontSize: 7,
                             color: t.muted,
                           }}
                         >
@@ -452,7 +454,7 @@ export function Work({ theme: t = DARK } = {}) {
                       whileHover={{ x: 2 }}
                       style={{
                         fontFamily: "'Space Mono',monospace",
-                        fontSize: 9,
+                        fontSize: 10,
                         color: p.color,
                         fontWeight: 700,
                         letterSpacing: "0.08em",
@@ -504,7 +506,17 @@ export function Work({ theme: t = DARK } = {}) {
                       }}
                     >
                       <span>Star</span>
-                      <span></span>
+                      <span>
+                        <svg
+                          aria-hidden="true"
+                          height="10"
+                          viewBox="0 0 16 16"
+                          width="10"
+                          fill="currentColor"
+                        >
+                          <path d="M8 0l2.39 4.84 5.34.78-3.86 3.76.91 5.31L8 12.77l-4.78 2.52.91-5.31L.27 5.62l5.34-.78L8 0z" />
+                        </svg>
+                      </span>
                     </motion.a>
                   </div>
                 </div>
