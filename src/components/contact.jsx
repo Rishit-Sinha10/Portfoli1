@@ -245,7 +245,7 @@ export function Contact({ theme: t = DARK } = {}) {
                   e.target.style.boxShadow = `0 0 0 3px ${t.accent}15`;
                 }}
                 onBlur={(e) => {
-                  e.target.style.borderColor = t.border;
+                  e.target.style.borderColor = t.accent;
                   e.target.style.boxShadow = "none";
                 }}
               />

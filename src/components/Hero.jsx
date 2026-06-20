@@ -171,8 +171,7 @@ export function Hero({ theme: T, dark } = {}) {
           }}
         >
           <a
-            href="https://drive.google.com/file/d/1p1XKaccALnnAmB1U4ZN23swSsSWkCKrN/view?usp=sharing"
-            download
+            href="https://drive.google.com/file/d/1UgxwqWiQXlooi4EpOZ-GbZZpbqjn9t7r/view?usp=sharing" download
           >
             <HoverButton></HoverButton>
           </a>
