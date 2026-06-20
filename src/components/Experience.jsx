@@ -21,7 +21,7 @@ export function Experience({ theme: t = DARK } = {}) {
       period: "July 2025 - Aug 2025",
       description: [
         "Architected real-time chat application using Node.js, Express, and WebSockets",
-        "Implemented JWT-based authentication with MongoD",
+        "Implemented JWT-based authentication with MongoDB",
       ],
     },
     {

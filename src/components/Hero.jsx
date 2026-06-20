@@ -17,6 +17,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaDiscord,
+  FaTwitter,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import profilepic from "../assets/profile.png";
@@ -33,7 +34,7 @@ export function Hero({ theme: T, dark } = {}) {
   const scrambled = useScramble("Building Systems That Work", hovered);
   const { scrollY } = useScroll();
   const typewriterText = useTypewriter(
-    "Full-stack engineer shipping production systems.design interfaces people love. Specializing in React, Node.js",
+    "Aspiring Full-stack engineer shipping production systems.design interfaces people love",
     30,
     800,
   );
@@ -101,7 +102,9 @@ export function Hero({ theme: T, dark } = {}) {
               fontSize: "16px",
               fontWeight: 400,
             }}
-          >Rishit Sinha</span>
+          >
+            Rishit Sinha
+          </span>
         </div>
         {/* Name */}
         <motion.h1
@@ -197,7 +200,7 @@ export function Hero({ theme: T, dark } = {}) {
             <span>View Project →</span>
           </MagButton>
           <a
-            href="https://www.instagram.com/rishit_149"
+            href="https://x.com/rizz13801"
             target="_blank"
             rel="noreferrer"
             style={{
@@ -205,18 +208,7 @@ export function Hero({ theme: T, dark } = {}) {
               style: "none",
             }}
           >
-            <FaInstagram size={10} />
-          </a>
-          <a
-            href="https://discord.com/users/blackdevil345w"
-            target="_blank"
-            rel="noreferrer"
-            style={{
-              padding: "3px 6px",
-              style: "none",
-            }}
-          >
-            <FaDiscord size={10} />
+            <FaTwitter size={12} />
           </a>
           <a
             href="https://www.linkedin.com/in/rishit-sinha-6953ab363"
@@ -227,10 +219,10 @@ export function Hero({ theme: T, dark } = {}) {
               style: "none",
             }}
           >
-            <FaLinkedin size={10} />
+            <FaLinkedin size={12} />
           </a>
           <a
-            href="https://github.com/Ramesh1234-ai"
+            href="https://github.com/Rishit-Sinha10"
             target="_blank"
             rel="noreferrer"
             style={{
@@ -238,7 +230,7 @@ export function Hero({ theme: T, dark } = {}) {
               style: "none",
             }}
           >
-            <FaGithub size={10} />
+            <FaGithub size={12} />
           </a>
         </div>
       </div>

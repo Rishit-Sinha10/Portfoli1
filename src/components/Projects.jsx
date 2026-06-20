@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import { color, motion } from "framer-motion";
+import { color, Feature, motion } from "framer-motion";
 import { DARK, LIGHT, Star } from "./Theme";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -169,14 +169,21 @@ export function Work({ theme: t = DARK } = {}) {
       />
     ),
   };
-
   const PROJECTS = [
     {
       title: "FinanCinno",
       subtitle: "Expense Tracker Management System",
-      desc: "Problem: Personal finance apps have 40% abandonment after 2 weeks because manual tracking feels like a chore. Solution: Built a gamified expense tracker with real-time AI categorization using Gemini API. Features smart insights, habit-forming rewards system, and minimal friction UI. Result: 2,400+ active users in first 3 months, 45% 2-week retention (vs. 12% industry average). Reduced load time by 65% through React optimization and MongoDB query tuning.",
-      image:
-        "https://images.unsplash.com/photo-1554224311-beee415c15a7?w=600&h=400&fit=crop",
+      desc: "A modern, full-stack financial expense management application built with React (frontend) and Node.js/Express (backend). Designed to help users track expenses, manage budgets, and gain financial insights through intuitive interfaces and AI-powered chatbot assistance.",
+      problem:
+        "Personal finance apps have 40% abandonment after 2 weeks because manual tracking feels like a chore. ",
+      Solution:
+        "Built a gamified expense tracker with real-time AI categorization using Gemini API. ",
+      Feauture:
+        "Features smart insights, habit-forming rewards system, and minimal friction UI.",
+      Architecture:
+        "React frontend with Vite, Node.js/Express backend, MongoDB for data persistence.",
+      Result:
+        "Can Handle 1000 Concurent Users Test By K6,Has High Perfomance Than Other Compared With 28% Perfomance and 100 Seo Tested By Lighthouse ",
       tech: ["React", "Express", "Node.js", "MongoDB", "Clerk"],
       category: "Fullstack",
       status: "Live",
@@ -187,7 +194,17 @@ export function Work({ theme: t = DARK } = {}) {
     },
     {
       title: "Lumina",
-      desc: "Problem: Students struggle with inefficient study habits and knowledge retention. Solution: Built AI-powered learning platform with smart scheduling, real-time summaries, and personalized learning paths. Features spaced repetition algorithm, progress tracking, and collaborative study groups. Architecture: React frontend with Vite, Node.js/Express backend, MongoDB for data persistence. Currently in development with 500+ beta users and 92/100 Lighthouse score.",
+      desc: "Lumina is a modern, AI-powered study planning application designed to help students optimize their learning journey. Built with the MERN stack (MongoDB, Express.js, React, Node.js), Lumina combines intelligent study plan generation, seamless note management, and real-time progress tracking into a single, intuitive platform. Whether you're preparing for exams, organizing coursework, or building a personalized study schedule, Lumina leverages AI-driven insights to create optimized learning paths tailored to your unique goals.",
+      problem:
+        "Students struggle with inefficient study habits and knowledge retention",
+      Solution:
+        "Built AI-powered learning platform with smart scheduling, real-time summaries, and personalized learning paths.",
+      Feauture:
+        "Features spaced repetition algorithm, progress tracking, and collaborative study groups.",
+      Architecture:
+        "React frontend with Vite, Node.js/Express backend, MongoDB for data persistence.",
+      Result:
+        "Currently in development and can Handle 200 Concurent Users With Zero Delay Of Message and with Response Time Less Than   and 92/100 Lighthouse score. For Perfomance ",
       tech: ["React", "Node.js", "TailwindCSS", "MongoDB", "Express", "Clerk"],
       category: "Fullstack",
       image: lumina,
@@ -198,18 +215,36 @@ export function Work({ theme: t = DARK } = {}) {
     },
     {
       title: "StreamFlow",
-      desc: "Problem: Live streaming platforms require ultra-low latency and consistent quality under load. Solution: Built scalable streaming system delivering HLS/RTMP with sub-200ms latency. Features real-time chat with Redis, AI-powered moderation, CDN-based delivery for global users, and multi-device support. Architecture: React frontend, Node.js backend with WebSocket support. Handles 500+ concurrent viewers per stream with 99.5% uptime.",
+      desc: "Engineered a low-latency live streaming system using HLS/RTMP protocols, achieving sub-200ms delivery times for real-time audience engagement. Integrated Redis-based messaging for live chat, AI-powered moderation pipelines for automated content filtering, and CDN edge delivery for global scalability. The platform supports 500+ concurrent viewers per stream with 99.5% uptime and reliable cross-device streaming experiences  In Devlopment.",
+      problem:
+        "Live streaming platforms require ultra-low latency and consistent quality under load.",
+      Solution:
+        "Built scalable streaming system delivering HLS/RTMP with sub-200ms latency.",
+      Feauture:
+        "Features real-time chat with Redis, AI-powered moderation, CDN-based delivery for global users, and multi-device support.",
+      Architechture: "React frontend, Node.js backend with WebSocket support.",
+      Result: "Handles 500+ concurrent viewers per stream with 99.5% uptime.",
       tech: ["React", "Node.js", "MongoDB", "Express", "Clerk", "TailwindCSS"],
       category: "Fullstack",
       status: "In Dev",
       image: Stream,
       featured: false,
       liveUrl: "https://echo-rizz.vercel.app/",
-      githubUrl: "https://github.com/ramesh1234-ai/bookish-spork",
+      githubUrl: "https://github.com/Ramesh1234-ai/P1",
     },
     {
       title: "ZecoAI",
-      desc: "Problem: Developers waste time switching between code editors and AI tools, losing context. Solution: Built integrated development environment combining VS Code-like editor with persistent AI assistance. Features instant code execution, real-time collaboration, integrated terminal, and AI debugging. Architecture: React Monaco editor, Node.js backend with sandboxed execution. Reduced developer iteration time by 45% with persistent conversation context.",
+      desc: "Built an AI-powered cloud IDE that combines a VS Code-like development environment with persistent conversational assistance, eliminating context switching between coding and AI tools. Integrated real-time collaboration, instant code execution, sandboxed runtime environments, and AI-driven debugging workflows. Leveraging React Monaco Editor and a Node.js backend, the platform reduced developer iteration time by 45% through contextual code understanding and continuous AI assistance.",
+      problem:
+        "Developers waste time switching between code editors and AI tools, losing context.",
+      Solution:
+        "Built integrated development environment combining VS Code-like editor with persistent AI assistance.",
+      Feauture:
+        "Features instant code execution, real-time collaboration, integrated terminal, and AI debugging.",
+      Architecture:
+        "React Monaco editor, Node.js backend with sandboxed execution.",
+      Result:
+        "Reduced developer iteration time by 45% with persistent conversation context.",
       tech: ["React", "Node.js", "Express", "MongoDB", "Clerk", "Mongoose"],
       category: "Fullstack",
       featured: "false",
@@ -392,7 +427,24 @@ export function Work({ theme: t = DARK } = {}) {
                         margin: 0,
                       }}
                     >
-                      {p.desc}
+                      <p>
+                        <strong>Desc:</strong>{p.desc}
+                      </p>
+                      <p>
+                        <strong>Problem:</strong> {p.problem}
+                      </p>
+                      <p>
+                        <strong>Solution:</strong> {p.Solution}
+                      </p>
+                      <p>
+                        <strong>Features:</strong> {p.Feauture}
+                      </p>
+                      <p>
+                        <strong>Architecture:</strong> {p.Architecture}
+                      </p>
+                      <p>
+                        <strong>Results:</strong> {p.Result}
+                      </p>
                     </p>
                   </div>
 

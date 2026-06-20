@@ -68,7 +68,25 @@ function App() {
         <Separator />
         <Activity />
         <Separator />
-        <Contact theme={darkMode ? { text: "#e5e7eb", accent: "#c084fc", border: "#2e303a", background: "#1a1a1a", surface: "#222" } : { text: "#000", accent: "#E07845", border: "#e5e7eb", background: "#fff", surface: "#fafafa" }} />
+        <Contact
+          theme={
+            darkMode
+              ? {
+                  text: "#e5e7eb",
+                  accent: "#c084fc",
+                  border: "#2e303a",
+                  background: "#1a1a1a",
+                  surface: "#222",
+                }
+              : {
+                  text: "#000",
+                  accent: "#E07845",
+                  border: "#e5e7eb",
+                  background: "#fff",
+                  surface: "#fafafa",
+                }
+          }
+        />
         <footer
           style={{
             background: darkMode ? "#0f0f0f" : "#fafafa",
@@ -115,7 +133,7 @@ function App() {
 
             <div style={{ display: "flex", gap: "16px", alignItems: "center" }}>
               <a
-                href="https://github.com/Ramesh1234-ai"
+                href="https://github.com/Rishit-Sinha10"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
@@ -145,39 +163,6 @@ function App() {
                 }}
               >
                 <FaGithub size={18} />
-              </a>
-
-              <a
-                href="https://www.instagram.com/rishit_149"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "8px",
-                  background: darkMode ? "#222" : "#f0f0f0",
-                  color: darkMode ? "#aaa" : "#171717",
-                  transition: "all 0.2s ease",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#E07845";
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = darkMode
-                    ? "#222"
-                    : "#f0f0f0";
-                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <FaInstagram size={18} />
               </a>
               <a
                 href="mailto:Sinharishit04@gmail.com"
@@ -241,39 +226,6 @@ function App() {
                 }}
               >
                 <FaLinkedin size={18} />
-              </a>
-
-              <a
-                href="https://discord.com/users/blackdevil345w"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Discord"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "40px",
-                  height: "40px",
-                  borderRadius: "8px",
-                  background: darkMode ? "#222" : "#f0f0f0",
-                  color: darkMode ? "#aaa" : "#171717",
-                  transition: "all 0.2s ease",
-                  textDecoration: "none",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "#E07845";
-                  e.currentTarget.style.color = "#fff";
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = darkMode
-                    ? "#222"
-                    : "#f0f0f0";
-                  e.currentTarget.style.color = darkMode ? "#aaa" : "#171717";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
-              >
-                <FaDiscord size={18} />
               </a>
               <a
                 href="https://leetcode.com/u/rizz4566/"

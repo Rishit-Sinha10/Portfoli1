@@ -81,7 +81,6 @@ From your Projects component:
 ### Current State: 5.5/10
 #### 3.1 Typography: INCONSISTENT & WEAK ❌
 **Problem 1: Font Choices**
-
 ```css
 fontFamily: "'DM Serif Display', Georgia, serif"  /* Serif */
 fontFamily: "'DM Serif Display', serif"           /* Serif again */
@@ -184,10 +183,8 @@ Example of good problem statement:
 Your Experience section mentions "Increases User By 20%" and "Reduce Latencey of System By 30%" but in a list format. **These numbers should be PROJECT metrics, prominently displayed.**
 
 #### 4.5 Missing Context (Who? Why You?) ❌
-
 **Current:** Projects listed with no context  
 **Should Clarify:**
-
 - What was your specific role? (Design? Backend? Both?)
 - Team size?
 - Timeline?
@@ -209,9 +206,7 @@ Your Experience section mentions "Increases User By 20%" and "Reduce Latencey of
 3. Concepts/Exploration (2-3 images)
 4. Final Solution (3-4 images)
 5. Results/Metrics (1 image)
-
 You currently show: None of this.
-
 #### 4.7 Project Relevance to Target Role ❌
 **Your projects:**
 - Expense tracker

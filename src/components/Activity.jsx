@@ -45,7 +45,7 @@ export function Activity() {
               </em>
             </h2>
           </Reveal>
-          <GitHubCalendar username="ramesh1234-ai" />
+          <GitHubCalendar username="Rishit-Sinha10" />
         </div>
       </section>
     </>

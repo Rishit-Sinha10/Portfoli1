@@ -25,7 +25,7 @@ export default function NavDock({ darkMode = false, toggleTheme = () => {} }) {
     <div
       style={{
         position: "fixed",
-        top: "20px",
+        top: "10px",
         left: "50%",
         transform: "translateX(-50%)",
         zIndex: 1000,
@@ -50,23 +50,28 @@ export default function NavDock({ darkMode = false, toggleTheme = () => {} }) {
         }}
       >
         {/* Logo/Brand */}
-        <img
-          src={proof}
-          loading="lazy"
-          style={{
-            marginRight: "8px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "36px",
-            height: "36px",
-            borderRadius: "50%",
-            background: "linear-gradient(135deg, #E07845 0%, #ff9466 100%)",
-            color: "#fff",
-            fontWeight: "bold",
-            fontSize: "7px",
-          }}
-        ></img>
+        <a href="">
+          <img
+            src={proof}
+            loading="lazy"
+            onClick={() => {
+              const element = document.getElementById("home");
+            }}
+            style={{
+              marginRight: "8px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "36px",
+              height: "36px",
+              borderRadius: "50%",
+              background: "linear-gradient(135deg, #E07845 0%, #ff9466 100%)",
+              color: "#fff",
+              fontWeight: "bold",
+              fontSize: "7px",
+            }}
+          ></img>
+        </a>
 
         {/* Nav Items */}
         {navItems.map((item) => (

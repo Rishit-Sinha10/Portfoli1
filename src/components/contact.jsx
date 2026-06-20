@@ -270,6 +270,7 @@ export function Contact({ theme: t = DARK } = {}) {
               }}
             >
               {isLoading ? "Sending..." : "Send Message"}
+              
             </motion.button>
 
             {submitted && (
