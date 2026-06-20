@@ -190,7 +190,7 @@ export function Work({ theme: t = DARK } = {}) {
       image: image,
       featured: true,
       liveUrl: "https://finan-cino.vercel.app/",
-      githubUrl: "https://github.com/Ramesh1234-ai/Financcino",
+      githubUrl: "https://github.com/Rishit-Sinha10/Financcino",
     },
     {
       title: "Lumina",
@@ -211,7 +211,7 @@ export function Work({ theme: t = DARK } = {}) {
       status: "In Dev",
       featured: "false",
       liveUrl: "https://lumina-nine-tan.vercel.app/",
-      githubUrl: "https://github.com/Ramesh1234-ai/NoteMog",
+      githubUrl: "https://github.com/Rishit-Sinha10/NoteMog",
     },
     {
       title: "StreamFlow",
@@ -222,7 +222,7 @@ export function Work({ theme: t = DARK } = {}) {
         "Built scalable streaming system delivering HLS/RTMP with sub-200ms latency.",
       Feauture:
         "Features real-time chat with Redis, AI-powered moderation, CDN-based delivery for global users, and multi-device support.",
-      Architechture: "React frontend, Node.js backend with WebSocket support.",
+      Architecture: "React frontend, Node.js backend with WebSocket support.",
       Result: "Handles 500+ concurrent viewers per stream with 99.5% uptime.",
       tech: ["React", "Node.js", "MongoDB", "Express", "Clerk", "TailwindCSS"],
       category: "Fullstack",
@@ -230,7 +230,7 @@ export function Work({ theme: t = DARK } = {}) {
       image: Stream,
       featured: false,
       liveUrl: "https://echo-rizz.vercel.app/",
-      githubUrl: "https://github.com/Ramesh1234-ai/P1",
+      githubUrl: "https://github.com/Rishit-Sinha10/P1",
     },
     {
       title: "ZecoAI",
@@ -251,7 +251,7 @@ export function Work({ theme: t = DARK } = {}) {
       image: ZecoAI,
       status: "In Dev",
       liveUrl: "https://zecoai.vercel.app/",
-      githubUrl: "https://github.com/Ramesh1234-ai/HeartSync",
+      githubUrl: "https://github.com/Rishit-Sinha10/HeartSync",
     },
   ];
   return (
