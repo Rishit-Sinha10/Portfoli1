@@ -1,5 +1,5 @@
 import { useState } from "react";
-import proof from "../assets/proof.avif";
+import proof from "../assets/proof.jpg";
 import profilepic from "../../src/assets/profile.png";
 const navItems = [
   { label: "Home", id: "home" },

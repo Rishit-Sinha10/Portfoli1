@@ -8,9 +8,7 @@ import { Activity } from "./components/Activity";
 import { Contact } from "./components/contact";
 import { SiLeetcode } from "react-icons/si";
 import {
-  FaDiscord,
   FaEnvelope,
-  FaInstagram,
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";

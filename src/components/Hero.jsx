@@ -3,27 +3,31 @@ import {
   motion,
   useScroll,
   useTransform,
-  AnimatePresence,
-  px,
 } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { useScramble } from "../hooks/useScramble";
 import { HERO_WORDS } from "../constants/heroConstants";
 import { MagButton } from "./mag";
-import { DARK, LIGHT } from "./Theme";
+import { DARK} from "./Theme";
 import {
-  FaFacebook,
-  FaInstagram,
   FaLinkedin,
   FaGithub,
-  FaDiscord,
   FaTwitter,
+  FaNodeJs,
 } from "react-icons/fa";
+import StarBorder from "./starbutton";
 import { FaXTwitter } from "react-icons/fa6";
-import profilepic from "../assets/profile.png";
 import { HoverButton } from "./HoverButton";
 import proof from "../assets/proof.avif";
 import AsciiProfile from "../assets/AsciiProfile.avif"
+import { FaReact } from "react-icons/fa6";
+import { SiExpress, SiMongodb } from "react-icons/si";
+import { FaGraduationCap } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
+import { FaBriefcase } from "react-icons/fa6";
+import { FaFutbol } from "react-icons/fa6";
+import { FaMapPin } from "react-icons/fa6";
+// AboutSection.jsx
 export function Hero({ theme: T, dark } = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);
@@ -34,7 +38,7 @@ export function Hero({ theme: T, dark } = {}) {
   const scrambled = useScramble("Building Systems That Work", hovered);
   const { scrollY } = useScroll();
   const typewriterText = useTypewriter(
-    "Aspiring Full-stack engineer shipping production systems.design interfaces people love",
+    `a final-year B.Tech student focused on building high-performance web applications with React, Node.js, and Express. I enjoy creating interfaces that feel fast and intuitive, where performance isn't an optimization pass`,
     30,
     800,
   );
@@ -171,7 +175,8 @@ export function Hero({ theme: T, dark } = {}) {
           }}
         >
           <a
-            href="https://drive.google.com/file/d/1UgxwqWiQXlooi4EpOZ-GbZZpbqjn9t7r/view?usp=sharing" download
+            href="https://drive.google.com/file/d/1UgxwqWiQXlooi4EpOZ-GbZZpbqjn9t7r/view?usp=sharing"
+            download
           >
             <HoverButton></HoverButton>
           </a>
@@ -196,7 +201,7 @@ export function Hero({ theme: T, dark } = {}) {
               borderRadius: "99rem",
             }}
           >
-            <span>View Project →</span>
+            <span>Projects</span>
           </MagButton>
           <a
             href="https://x.com/rizz13801"

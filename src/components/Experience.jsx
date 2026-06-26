@@ -1,6 +1,6 @@
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
-import { DARK, LIGHT } from "./Theme";
+import { DARK } from "./Theme";
 export function Experience({ theme: t = DARK } = {}) {
   const EXPERIENCES = [
     {

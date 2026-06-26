@@ -1,207 +1,304 @@
-You are given a task to integrate an existing React component in the codebase
+DELL@DESKTOP-MASMBNO MINGW64 ~/Desktop/Portfoli1 (main)
+$ npm run lint
+> frontend@0.0.0 lint
+> eslint .
+C:\Users\DELL\Desktop\Portfoli1\src\App.jsx
+  11:3   error  'FaDiscord' is defined but never used                                                                                             no-unused-vars
+  13:3   error  'FaInstagram' is defined but never used                                                                                             no-unused-vars
+  62:10  error  Error: Cannot create components during render
+Components created during render will reset their state each time they are created. Declare componentsoutside of render.
 
-The codebase should support:
-- shadcn project structure  
-- Tailwind CSS
-- Typescript
+  60 |         <NavDock darkMode={darkMode} toggleTheme={toggleTheme} />
+  61 |         <Hero />
+> 62 |         <Separator />
+     |          ^^^^^^^^^ This component is created during render
+  63 |         <Skills />
+  64 |         <Separator />
+  65 |         <Experience />
 
-If it doesn't, provide instructions on how to setup project via shadcn CLI, install Tailwind or Typescript.
+  24 |   };
+  25 |
+> 26 |   const Separator = ({ className = "" }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |     <div
+     | ^^^^^^^^
+> 28 |       className={`separator ${className}`}
+     | ^^^^^^^^
+> 29 |       style={{
+     | ^^^^^^^^
+> 30 |         borderColor: darkMode ? "#444" : "#e5e7eb",
+     | ^^^^^^^^
+> 31 |       }}
+     | ^^^^^^^^
+> 32 |     />
+     | ^^^^^^^^
+> 33 |   );
+     | ^^^^ The component is created during render here
+  34 |   const currentYear = new Date().getFullYear();
+  35 |   return (
+  36 |     <div  react-hooks/static-components
+  64:10  error  Error: Cannot create components during render
 
-Determine the default path for components and styles. 
-If default path for components is not /components/ui, provide instructions on why it's important to create this folder
-Copy-paste this component to /components/ui folder:
-```tsx
-image-tiles.tsx
-'use client'
-import { motion, Variants } from 'framer-motion';
-import React from 'react';
+Components created during render will reset their state each time they are created. Declare componentsoutside of render.
 
-interface ImageRevealProps {
-    leftImage: string;
-    middleImage: string;
-    rightImage: string;
-}
+  62 |         <Separator />
+  63 |         <Skills />
+> 64 |         <Separator />
+     |          ^^^^^^^^^ This component is created during render
+  65 |         <Experience />
+  66 |         <Separator />
+  67 |         <Work />
 
-export default function ImageReveal({ leftImage, middleImage, rightImage }: ImageRevealProps) {
-    const containerVariants: Variants = {
-        initial: {
-            opacity: 0,
-        },
-        animate: {
-            opacity: 1,
-            transition: {
-                delay: 0.2,
-                staggerChildren: 0.2,
-            }
-        }
-    };
+  24 |   };
+  25 |
+> 26 |   const Separator = ({ className = "" }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |     <div
+     | ^^^^^^^^
+> 28 |       className={`separator ${className}`}
+     | ^^^^^^^^
+> 29 |       style={{
+     | ^^^^^^^^
+> 30 |         borderColor: darkMode ? "#444" : "#e5e7eb",
+     | ^^^^^^^^
+> 31 |       }}
+     | ^^^^^^^^
+> 32 |     />
+     | ^^^^^^^^
+> 33 |   );
+     | ^^^^ The component is created during render here
+  34 |   const currentYear = new Date().getFullYear();
+  35 |   return (
+  36 |     <div                                              react-hooks/static-components
+  66:10  error  Error: Cannot create components during render
 
-    const leftImageVariants: Variants = {
-        initial: { rotate: 0, x: 0, y: 0 },
-        animate: {
-            rotate: -8,
-            x: -150,
-            y: 10,
-            transition: {
-                type: "spring" as const,
-                stiffness: 120,
-                damping: 12
-            }
-        },
-        hover: {
-            rotate: 1,
-            x: -160,
-            y: 0,
-            transition: {
-                type: "spring" as const,
-                stiffness: 200,
-                damping: 15
-            }
-        }
-    };
+Components created during render will reset their state each time they are created. Declare componentsoutside of render.
 
-    const middleImageVariants: Variants = {
-        initial: { rotate: 0, x: 0, y: 0 },
-        animate: {
-            rotate: 6,
-            x: 0,
-            y: 0,
-            transition: {
-                type: "spring" as const,
-                stiffness: 120,
-                damping: 12
-            }
-        },
-        hover: {
-            rotate: 0,
-            x: 0,
-            y: -10,
-            transition: {
-                type: "spring" as const,
-                stiffness: 200,
-                damping: 15
-            }
-        }
-    };
+  64 |         <Separator />
+  65 |         <Experience />
+> 66 |         <Separator />
+     |          ^^^^^^^^^ This component is created during render
+  67 |         <Work />
+  68 |         <Separator />
+  69 |         <Activity />
 
-    const rightImageVariants: Variants = {
-        initial: { rotate: 0, x: 0, y: 0 },
-        animate: {
-            rotate: -6,
-            x: 200,
-            y: 20,
-            transition: {
-                type: "spring" as const,
-                stiffness: 120,
-                damping: 12
-            }
-        },
-        hover: {
-            rotate: 3,
-            x: 200,
-            y: 10,
-            transition: {
-                type: "spring" as const,
-                stiffness: 200,
-                damping: 15
-            }
-        }
-    };
+  24 |   };
+  25 |
+> 26 |   const Separator = ({ className = "" }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |     <div
+     | ^^^^^^^^
+> 28 |       className={`separator ${className}`}
+     | ^^^^^^^^
+> 29 |       style={{
+     | ^^^^^^^^
+> 30 |         borderColor: darkMode ? "#444" : "#e5e7eb",
+     | ^^^^^^^^
+> 31 |       }}
+     | ^^^^^^^^
+> 32 |     />
+     | ^^^^^^^^
+> 33 |   );
+     | ^^^^ The component is created during render here
+  34 |   const currentYear = new Date().getFullYear();
+  35 |   return (
+  36 |     <div                                            react-hooks/static-components
+  68:10  error  Error: Cannot create components during render
 
-    return (
-        <motion.div
-            className="relative flex items-center justify-center w-64 h-64 my-12 "
-            variants={containerVariants}
-            initial="initial"
-            animate="animate"
-        >
-            {/* Left Image - Lowest z-index */}
-            <motion.div
-                className="absolute w-48 h-48 origin-bottom-right overflow-hidden rounded-xl shadow-lg bg-white"
-                variants={leftImageVariants}
-                whileHover="hover"
-                animate="animate"
-                style={{ zIndex: 30 }}
-            >
-                <img
-                    src={leftImage}
-                    alt="Left image"
-                    className="object-cover p-2 rounded-xl"
-                />
-            </motion.div>
+Components created during render will reset their state each time they are created. Declare componentsoutside of render.
+  66 |         <Separator />
+  67 |         <Work />
+> 68 |         <Separator />
+     |          ^^^^^^^^^ This component is created during render
+  69 |         <Activity />
+  70 |         <Separator />
+  71 |         <Contact
 
-            {/* Middle Image - Middle z-index */}
-            <motion.div
-                className="absolute w-48 h-48 origin-bottom-left overflow-hidden rounded-xl shadow-lg bg-white"
-                variants={middleImageVariants}
-                whileHover="hover"
-                animate="animate"
-                style={{ zIndex: 20 }}
-            >
-                <img
-                    src={middleImage}
-                    alt="Middle image"
-                    className="object-cover p-2 rounded-2xl"
-                />
-            </motion.div>
+  24 |   };
+  25 |
+> 26 |   const Separator = ({ className = "" }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |     <div
+     | ^^^^^^^^
+> 28 |       className={`separator ${className}`}
+     | ^^^^^^^^
+> 29 |       style={{
+     | ^^^^^^^^
+> 30 |         borderColor: darkMode ? "#444" : "#e5e7eb",
+     | ^^^^^^^^
+> 31 |       }}
+     | ^^^^^^^^
+> 32 |     />
+     | ^^^^^^^^
+> 33 |   );
+     | ^^^^ The component is created during render here
+  34 |   const currentYear = new Date().getFullYear();
+  35 |   return (
+  36 |     <div                                                  react-hooks/static-components
+  70:10  error  Error: Cannot create components during render
 
-            {/* Right Image - Highest z-index */}
-            <motion.div
-                className="absolute w-48 h-48 origin-bottom-right overflow-hidden rounded-xl shadow-lg bg-white"
-                variants={rightImageVariants}
-                whileHover="hover"
-                animate="animate"
-                style={{ zIndex: 10 }}
-            >
-                <img
-                    src={rightImage}
-                    alt="Right image"
-                    className="object-cover p-2 rounded-2xl"
-                />
-            </motion.div>
-        </motion.div>
-    );
-}
+Components created during render will reset their state each time they are created. Declare componentsoutside of render.
 
+  68 |         <Separator />
+  69 |         <Activity />
+> 70 |         <Separator />
+     |          ^^^^^^^^^ This component is created during render
+  71 |         <Contact
+  72 |           theme={
+  73 |             darkMode
 
-demo.tsx
-import ImageReveal from "@/components/ui/image-tiles";
-import React from "react";
+  24 |   };
+  25 |
+> 26 |   const Separator = ({ className = "" }) => (
+     |                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+> 27 |     <div
+     | ^^^^^^^^
+> 28 |       className={`separator ${className}`}
+     | ^^^^^^^^
+> 29 |       style={{
+     | ^^^^^^^^
+> 30 |         borderColor: darkMode ? "#444" : "#e5e7eb",
+     | ^^^^^^^^
+> 31 |       }}
+     | ^^^^^^^^
+> 32 |     />
+     | ^^^^^^^^
+> 33 |   );
+     | ^^^^ The component is created during render here
+  34 |   const currentYear = new Date().getFullYear();
+  35 |   return (
+  36 |     <div                                                  react-hooks/static-components
 
-export default function DemoOne() {
-  return (
-    <div>
-      <ImageReveal
-          leftImage="https://res.cloudinary.com/dctgknnt7/image/upload/v1758636339/left_oog9ck.jpg"
-          middleImage="https://res.cloudinary.com/dctgknnt7/image/upload/v1758636339/middle_vqdg9p.jpg"
-          rightImage="https://res.cloudinary.com/dctgknnt7/image/upload/v1758636340/right_tpkukv.jpg"
-      />
-    </div>
-  );
-}
+C:\Users\DELL\Desktop\Portfoli1\src\components\Activity.jsx
+  6:10  error  'Leetcode' is assigned a value but never used  no-unused-vars
 
-```
+C:\Users\DELL\Desktop\Portfoli1\src\components\Experience.jsx
+  3:16  error  'LIGHT' is defined but never used  no-unused-vars
 
-Install NPM dependencies:
-```bash
-framer-motion
-```
+C:\Users\DELL\Desktop\Portfoli1\src\components\Hero.jsx
 
-Implementation Guidelines
- 1. Analyze the component structure and identify all required dependencies
- 2. Review the component's argumens and state
- 3. Identify any required context providers or hooks and install them
- 4. Questions to Ask
- - What data/props will be passed to this component?
- - Are there any specific state management requirements?
- - Are there any required assets (images, icons, etc.)?
- - What is the expected responsive behavior?
- - What is the best place to use this component in the app?
-Steps to integrate
- 0. Copy paste all the code above in the correct directories
- 1. Install external dependencies
- 2. Fill image assets with Unsplash stock images you know exist
- 3. Use lucide-react icons for svgs or logos if component requires them
+  15:3   error  'FaFacebook' is defined but never used               no-unused-vars
+  16:3   error  'FaInstagram' is defined but never used              no-unused-vars
+  19:3   error  'FaDiscord' is defined but never used                no-unused-vars
+  22:10  error  'FaXTwitter' is defined but never used               no-unused-vars
+  23:8   error  'profilepic' is defined but never used               no-unused-vars
+  26:8   error  'AsciiProfile' is defined but never used             no-unused-vars
+  29:10  error  'wordIdx' is assigned a value but never used         no-unused-vars
+  32:9   error  'isDark' is assigned a value but never used          no-unused-vars
+  41:9   error  'scrollProgress' is assigned a value but never used  no-unused-vars
+  42:9   error  'blobY' is assigned a value but never used           no-unused-vars
 
-<a data-testid="linkElement" href="mailto:hello@tanishaphanbuh.in" target="_self" class="twXk19" aria-label="EMAIL"><img sizes="114px" srcset="https://static.wixstatic.com/media/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg/v1/fill/w_114,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg 1x, https://static.wixstatic.com/media/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg/v1/fill/w_228,h_228,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg 2x" id="img_0_comp-is8zz7cl3" src="https://static.wixstatic.com/media/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg/v1/fill/w_114,h_114,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ef29e4_41a2167ce2fb4daf8cf234509971ed4c~mv2.jpg" alt="EMAIL" style="object-fit:cover" class="ZK9snE sFiSiq" width="114" height="114"></a>
-evision host Chef Sherie's Instagram who can be contacted at \(\text{agirlfromthehills@gmail.com}\).Harshil Thakur: A po
+C:\Users\DELL\Desktop\Portfoli1\src\components\HoverButton.jsx
+    1:8  error  'React' is defined but never used               no-unused-vars
+  143:3  error  'text' is assigned a value but never used       no-unused-vars
+  144:3  error  'onClick' is assigned a value but never used    no-unused-vars
+  145:3  error  'disabled' is assigned a value but never used   no-unused-vars
+  146:3  error  'ariaLabel' is assigned a value but never used  no-unused-vars
+
+C:\Users\DELL\Desktop\Portfoli1\src\components\Projects.jsx
+   2:10  error  'color' is defined but never used            no-unused-vars
+   2:17  error  'Feature' is defined but never used          no-unused-vars
+   3:16  error  'LIGHT' is defined but never used            no-unused-vars
+   3:23  error  'Star' is defined but never used             no-unused-vars
+   7:8   error  'Huzz' is defined but never used             no-unused-vars
+  11:8   error  'LifeDrop' is defined but never used         no-unused-vars
+  15:3   error  'FaDocker' is defined but never used         no-unused-vars
+  16:3   error  'FaAws' is defined but never used            no-unused-vars
+  17:3   error  'FaGit' is defined but never used            no-unused-vars
+  18:3   error  'FaEnvelope' is defined but never used       no-unused-vars
+  19:3   error  'FaTwitter' is defined but never used        no-unused-vars
+  20:3   error  'FaLinkedin' is defined but never used       no-unused-vars
+  21:3   error  'FaGithub' is defined but never used         no-unused-vars
+  22:3   error  'FaInstagram' is defined but never used      no-unused-vars
+  23:3   error  'FaJava' is defined but never used           no-unused-vars
+  24:3   error  'FaLinux' is defined but never used          no-unused-vars
+  25:3   error  'FaCss3' is defined but never used           no-unused-vars
+  30:3   error  'SiPython' is defined but never used         no-unused-vars
+  31:3   error  'SiOpenai' is defined but never used         no-unused-vars
+  32:3   error  'SiTypescript' is defined but never used     no-unused-vars
+  34:3   error  'SiFramer' is defined but never used         no-unused-vars
+  35:3   error  'SiThreedotjs' is defined but never used     no-unused-vars
+  36:3   error  'SiFigma' is defined but never used          no-unused-vars
+  37:3   error  'SiVercel' is defined but never used         no-unused-vars
+  40:3   error  'SiRender' is defined but never used         no-unused-vars
+  41:3   error  'SiNextdotjs' is defined but never used      no-unused-vars
+  44:3   error  'SiClaude' is defined but never used         no-unused-vars
+  45:3   error  'SiVite' is defined but never used           no-unused-vars
+  46:3   error  'SiNpm' is defined but never used            no-unused-vars
+  47:3   error  'SiPostgresql' is defined but never used     no-unused-vars
+  48:3   error  'SiRedis' is defined but never used          no-unused-vars
+  49:3   error  'SiNginx' is defined but never used          no-unused-vars
+  50:3   error  'SiGithubactions' is defined but never used  no-unused-vars
+  51:3   error  'SiCloudflare' is defined but never used     no-unused-vars
+  52:3   error  'SiGo' is defined but never used             no-unused-vars
+  53:3   error  'SiElixir' is defined but never used         no-unused-vars
+  54:3   error  'SiApachekafka' is defined but never used    no-unused-vars
+  55:3   error  'SiKubernetes' is defined but never used     no-unused-vars
+
+C:\Users\DELL\Desktop\Portfoli1\src\components\Skills.jsx
+   1:10  error  'color' is defined but never used            no-unused-vars
+   2:16  error  'LIGHT' is defined but never used            no-unused-vars
+   7:3   error  'FaDocker' is defined but never used         no-unused-vars
+   8:3   error  'FaAws' is defined but never used            no-unused-vars
+   9:3   error  'FaGit' is defined but never used            no-unused-vars
+  10:3   error  'FaEnvelope' is defined but never used       no-unused-vars
+  11:3   error  'FaTwitter' is defined but never used        no-unused-vars
+  12:3   error  'FaLinkedin' is defined but never used       no-unused-vars
+  13:3   error  'FaGithub' is defined but never used         no-unused-vars
+  14:3   error  'FaInstagram' is defined but never used      no-unused-vars
+  16:3   error  'FaLinux' is defined but never used          no-unused-vars
+  21:3   error  'SiPython' is defined but never used         no-unused-vars
+  22:3   error  'SiOpenai' is defined but never used         no-unused-vars
+  25:3   error  'SiFramer' is defined but never used         no-unused-vars
+  26:3   error  'SiThreedotjs' is defined but never used     no-unused-vars
+  27:3   error  'SiFigma' is defined but never used          no-unused-vars
+  35:3   error  'SiClaude' is defined but never used         no-unused-vars
+  36:3   error  'SiVite' is defined but never used           no-unused-vars
+  37:3   error  'SiNpm' is defined but never used            no-unused-vars
+  38:3   error  'SiPostgresql' is defined but never used     no-unused-vars
+  39:3   error  'SiRedis' is defined but never used          no-unused-vars
+  40:3   error  'SiNginx' is defined but never used          no-unused-vars
+  41:3   error  'SiGithubactions' is defined but never used  no-unused-vars
+  42:3   error  'SiCloudflare' is defined but never used     no-unused-vars
+  43:3   error  'SiGo' is defined but never used             no-unused-vars
+  44:3   error  'SiElixir' is defined but never used         no-unused-vars
+  45:3   error  'SiApachekafka' is defined but never used    no-unused-vars
+  46:3   error  'SiKubernetes' is defined but never used     no-unused-vars
+  99:9   error  'isDark' is assigned a value but never used  no-unused-vars
+
+C:\Users\DELL\Desktop\Portfoli1\src\components\Theme.jsx
+   1:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  13:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\DELL\Desktop\Portfoli1\src\components\contact.jsx
+   4:16  error  'LIGHT' is defined but never used        no-unused-vars
+   6:3   error  'FaEnvelope' is defined but never used   no-unused-vars
+   7:3   error  'FaLinkedin' is defined but never used   no-unused-vars
+   8:3   error  'FaGithub' is defined but never used     no-unused-vars
+   9:3   error  'FaDiscord' is defined but never used    no-unused-vars
+  10:3   error  'FaInstagram' is defined but never used  no-unused-vars
+
+C:\Users\DELL\Desktop\Portfoli1\src\components\footer.jsx
+   3:8   error  'profilepic' is defined but never used        no-unused-vars
+  58:21  error  'element' is assigned a value but never used  no-unused-vars
+
+C:\Users\DELL\Desktop\Portfoli1\src\components\mag.jsx
+  4:60  error  'dataCursor' is defined but never used  no-unused-vars
+
+C:\Users\DELL\Desktop\Portfoli1\src\hooks\useScramble.js
+  11:7  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updatingthe DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+   9 |   useEffect(() => {
+  10 |     if (!trigger) {
+> 11 |       setDisplay(text);
+     |       ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  12 |       return;
+  13 |     }
+  14 |  react-hooks/set-state-in-effect
+C:\Users\DELL\Desktop\Portfoli1\src\hooks\useTypewriter.js
+  4:10  error  'index' is assigned a value but never used  no-unused-vars
+✖ 107 problems (107 errors, 0 warnings)
