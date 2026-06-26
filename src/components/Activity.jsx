@@ -1,6 +1,4 @@
-import { useState } from "react";
 import { Reveal } from "./Reveal";
-import { useEffect } from "react";
 import { GitHubCalendar } from "react-github-calendar";
 export function Activity() {
   // const [Leetcode, setLeetcode] = useState(null);

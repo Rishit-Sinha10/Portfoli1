@@ -1,63 +1,23 @@
 import { Reveal } from "./Reveal";
-import { color, Feature, motion } from "framer-motion";
-import { DARK, LIGHT, Star } from "./Theme";
+import { motion } from "framer-motion";
+import { DARK} from "./Theme";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import image from "../assets/image.avif";
-import Huzz from "../assets/Huzz.avif";
 import Stream from "../assets/Stream.avif";
 import lumina from "../assets/Lumina.avif";
 import ZecoAI from "../assets/ZecoAI.avif";
-import LifeDrop from "../assets/LifeDrop.avif";
 import {
   FaReact,
   FaNodeJs,
-  FaDocker,
-  FaAws,
-  FaGit,
-  FaEnvelope,
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-  FaJava,
-  FaLinux,
-  FaCss3,
 } from "react-icons/fa";
-
 import {
   SiMongodb,
-  SiPython,
-  SiOpenai,
-  SiTypescript,
   SiTailwindcss,
-  SiFramer,
-  SiThreedotjs,
-  SiFigma,
-  SiVercel,
-  SiFlask,
-  SiJavascript,
-  SiRender,
-  SiNextdotjs,
   SiExpress,
   SiMysql,
-  SiClaude,
-  SiVite,
-  SiNpm,
-  SiPostgresql,
-  SiRedis,
-  SiNginx,
-  SiGithubactions,
-  SiCloudflare,
-  SiGo,
-  SiElixir,
-  SiApachekafka,
-  SiKubernetes,
   SiClerk,
-  SiCss,
-  SiHtml5,
   SiMongoose,
-  SiFirebase,
 } from "react-icons/si";
 export function Work({ theme: t = DARK } = {}) {
   const [visibleCount, setVisibleCount] = useState(2);
@@ -103,14 +63,6 @@ export function Work({ theme: t = DARK } = {}) {
         }}
       />
     ),
-    Flask: (
-      <SiFlask
-        size={10}
-        style={{
-          color: "#fff",
-        }}
-      />
-    ),
     MySql: (
       <SiMysql
         size={10}
@@ -127,41 +79,8 @@ export function Work({ theme: t = DARK } = {}) {
         }}
       />
     ),
-    JS: (
-      <SiJavascript
-        size={10}
-        style={{
-          color: "#fff200",
-        }}
-      />
-    ),
-    VanillaCSS: <SiCss size={10} color="#8800ff" />,
-    HTML: (
-      <SiHtml5
-        size={10}
-        style={{
-          color: "#ff6600",
-        }}
-      />
-    ),
-    FLASK: (
-      <SiFlask
-        size={10}
-        style={{
-          color: "#fff",
-        }}
-      />
-    ),
     Mongoose: (
       <SiMongoose
-        size={10}
-        style={{
-          color: "#DC143C",
-        }}
-      />
-    ),
-    Firebase: (
-      <SiFirebase
         size={10}
         style={{
           color: "#DC143C",

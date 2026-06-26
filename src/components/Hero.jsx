@@ -2,49 +2,31 @@ import { useState, useEffect } from "react";
 import {
   motion,
   useScroll,
-  useTransform,
 } from "framer-motion";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { useScramble } from "../hooks/useScramble";
 import { HERO_WORDS } from "../constants/heroConstants";
 import { MagButton } from "./mag";
-import { DARK} from "./Theme";
 import {
   FaLinkedin,
   FaGithub,
   FaTwitter,
-  FaNodeJs,
 } from "react-icons/fa";
-import StarBorder from "./starbutton";
-import { FaXTwitter } from "react-icons/fa6";
 import { HoverButton } from "./HoverButton";
 import proof from "../assets/proof.avif";
-import AsciiProfile from "../assets/AsciiProfile.avif"
-import { FaReact } from "react-icons/fa6";
-import { SiExpress, SiMongodb } from "react-icons/si";
-import { FaGraduationCap } from "react-icons/fa";
-import { FaCode } from "react-icons/fa6";
-import { FaBriefcase } from "react-icons/fa6";
-import { FaFutbol } from "react-icons/fa6";
-import { FaMapPin } from "react-icons/fa6";
 // AboutSection.jsx
-export function Hero({ theme: T, dark } = {}) {
+export function Hero({ theme: T,} = {}) {
   const [hovered, setHovered] = useState(false);
   const [wordIdx, setWordIdx] = useState(0);
   // Use provided theme or default to DARK
   const theme = T || DARK;
-  const isDark = dark !== undefined ? dark : true;
   // Hooks
   const scrambled = useScramble("Building Systems That Work", hovered);
-  const { scrollY } = useScroll();
   const typewriterText = useTypewriter(
     `a final-year B.Tech student focused on building high-performance web applications with React, Node.js, and Express. I enjoy creating interfaces that feel fast and intuitive, where performance isn't an optimization pass`,
     30,
     800,
   );
-  const scrollProgress = useTransform(scrollY, [0, 1000], [0, 100]);
-  const blobY = useTransform(scrollY, [0, 600], [0, 80]);
-
   // Word rotation animation
   useEffect(() => {
     const t = setInterval(

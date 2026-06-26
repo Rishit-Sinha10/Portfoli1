@@ -1,30 +1,15 @@
-import { color, motion } from "framer-motion";
-import { DARK, LIGHT } from "./Theme";
+import { motion } from "framer-motion";
+import { DARK} from "./Theme";
 import { Reveal } from "./Reveal";
 import {
   FaReact,
-  FaNodeJs,
-  FaDocker,
-  FaAws,
-  FaGit,
-  FaEnvelope,
-  FaTwitter,
-  FaLinkedin,
-  FaGithub,
-  FaInstagram,
-  FaJava,
-  FaLinux,
+  FaNodeJs,  
+  FaJava
 } from "react-icons/fa";
-
 import {
   SiMongodb,
-  SiPython,
-  SiOpenai,
   SiTypescript,
   SiTailwindcss,
-  SiFramer,
-  SiThreedotjs,
-  SiFigma,
   SiVercel,
   SiFlask,
   SiJavascript,
@@ -32,24 +17,12 @@ import {
   SiNextdotjs,
   SiExpress,
   SiMysql,
-  SiClaude,
-  SiVite,
-  SiNpm,
-  SiPostgresql,
-  SiRedis,
-  SiNginx,
-  SiGithubactions,
-  SiCloudflare,
-  SiGo,
-  SiElixir,
-  SiApachekafka,
-  SiKubernetes,
   SiCss,
   SiClerk,
   SiBun,
 } from "react-icons/si";
 
-export function Skills({ theme: T, dark } = {}) {
+export function Skills({ theme: T} = {}) {
   const skillCategories = [
     {
       category: "Languages",
@@ -94,10 +67,7 @@ export function Skills({ theme: T, dark } = {}) {
       ],
     },
   ];
-
   const theme = T || DARK;
-  const isDark = dark !== undefined ? dark : true;
-
   return (
     <section
       id="skills"

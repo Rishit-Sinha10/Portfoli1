@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
-export function MagButton({ children, style = {}, onClick, dataCursor }) {
+export function MagButton({ children, style = {}, onClick}) {
   const ref = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);

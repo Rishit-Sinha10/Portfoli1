@@ -1,15 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Reveal } from "./Reveal";
-import { DARK, LIGHT } from "./Theme";
-import {
-  FaEnvelope,
-  FaLinkedin,
-  FaGithub,
-  FaDiscord,
-  FaInstagram,
-} from "react-icons/fa";
-
+import { DARK} from "./Theme";
 export function Contact({ theme: t = DARK } = {}) {
   const [formState, setFormState] = useState({
     name: "",

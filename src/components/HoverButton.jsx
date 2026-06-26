@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 const StyledWrapper = styled.div`
   .btn-17,
@@ -140,10 +139,7 @@ const StyledWrapper = styled.div`
 `;
 
 export function HoverButton({ 
-  text = "Hover Me", 
-  onClick = () => {},
-  disabled = false,
-  ariaLabel = "Hover button"
+  
 }) {
   return (
     <StyledWrapper>
